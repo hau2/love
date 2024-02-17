@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif !important;
+  font-weight: 100;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  background-image: url("https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg");
+  background-size: cover;
+  -webkit-animation: slidein 100s;
+  animation: slidein 100s;
+
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+@-webkit-keyframes slidein {
+  from {
+    background-position: top;
+    background-size: 3000px;
+  }
+  to {
+    background-position: -100px 0px;
+    background-size: 2750px;
+  }
+}
+
+@keyframes slidein {
+  from {
+    background-position: top;
+    background-size: 3000px;
+  }
+  to {
+    background-position: -100px 0px;
+    background-size: 2750px;
+  }
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(75, 75, 250, 0.3);
+  border-radius: 3px;
+}
+.center h1 {
+  text-align: center;
+  color: white;
+  font-family: "Source Code Pro", monospace;
+  text-transform: uppercase;
+}
+.iam {
+  color: white;
+  font-size: 55px;
+  padding: 40px;
+  font-family: sans-serif;
+}
+.text {
+  display: table;
+  margin: 0px auto 0px auto; /* keep the table centered */
+  padding: 40px;
+  font-size: 20px;
+  background-color: green;
+  color: #ffffff;
+  color: white;
+  border-right: 2px solid #03e9f4;
+  font-size: 55px;
+  font-family: sans-serif;
+  color: #03e9f4;
+  -webkit-box-reflect: below -28px linear-gradient(transparent, rgba(0, 0, 0, 0.133));
+}
+.Button {
+    position: absolute;
+    bottom: 10%;
+    border: none;
+    color: #fff;
+    padding: 8px 16px;
+    width: 15em;
+    height: 5em;
+    line-height: 2em;
+    text-align: center;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 300%;
+    border-radius: 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .Button:hover {
+    animation: animated 8s linear infinite;
+  }
+  
+  .Button::before {
+    content: "";
+    position: absolute;
+    inset: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 400%;
+    border-radius: 35px;
+    transition: 0.5s;
+  }
+  
+  .Button:hover::before {
+    filter: blur(20px);
+  }
+  
+  @keyframes animated {
+    0% {
+      background-position: 0%;
+    }
+  
+    100% {
+      background-position: 400%;
+    }
+  }
